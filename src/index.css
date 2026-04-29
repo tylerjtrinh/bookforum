@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #f5f0e8;
+  --parchment: #ede4d0;
+  --amber: #c8852a;
+  --amber-light: #e8a84a;
+  --brown-dark: #3b2a1a;
+  --brown-mid: #6b4c2a;
+  --brown-light: #a07850;
+  --text: #2c1f10;
+  --text-muted: #7a6248;
+  --white: #fffdf8;
+  --shadow: 0 2px 12px rgba(60, 40, 10, 0.1);
+  --shadow-hover: 0 6px 24px rgba(60, 40, 10, 0.18);
+  --radius: 12px;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text);
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--brown-dark);
+}
+
+/* NAVBAR */
+nav {
+  background-color: var(--brown-dark);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav a {
+  color: var(--parchment);
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--amber-light);
+}
+
+nav a:first-child {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* PAGE WRAPPER */
+.page {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+/* HOME FEED */
+.feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.feed-controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.feed-controls input,
+.feed-controls select {
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--parchment);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.feed-controls input:focus,
+.feed-controls select:focus {
+  border-color: var(--amber);
+}
+
+/* POST CARD */
+.post-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border-left: 4px solid var(--amber);
+}
+
+.post-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.post-card .time {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.post-card .tagline {
+  font-size: 0.95rem;
+  color: var(--brown-light);
+  margin-bottom: 0.3rem;
+  font-style: italic;
+}
+
+.post-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-card .upvotes {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* FORMS */
+.form-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.form-card h1 {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--brown-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.65rem 1rem;
+  border: 1.5px solid var(--parchment);
+  border-radius: 8px;
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--amber);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--brown-mid);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--amber);
+}
+
+/* BUTTONS */
+.btn {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--amber);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--amber-light);
+}
+
+.btn-secondary {
+  background: var(--parchment);
+  color: var(--brown-dark);
+}
+
+.btn-secondary:hover {
+  background: var(--brown-light);
+  color: var(--white);
+}
+
+.btn-danger {
+  background: #c0392b;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #e74c3c;
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* POST DETAIL */
+.post-detail {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.post-detail img {
+  width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  margin-bottom: 1.5rem;
+}
+
+.post-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-detail .tagline {
+  font-style: italic;
+  color: var(--brown-light);
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.post-detail .content {
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1.5px solid var(--parchment);
+  margin: 1.5rem 0;
+}
+
+/* COMMENTS */
+.comment {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.comment-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid var(--parchment);
+  border-radius: 8px;
+  background: var(--cream);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.comment-form input:focus {
+  border-color: var(--amber);
+}
+
+.empty {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.95rem;
+}
