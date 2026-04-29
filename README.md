@@ -47,8 +47,7 @@ The following **additional** features are implemented:
 * [X] Used open library API to display book cover images based on the title and author the User entered!
 
 ## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
+<img width="800" height="450" alt="bookforum-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/060f3ee5-546b-4c08-8ea7-712dfd238335" />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with imgur  
